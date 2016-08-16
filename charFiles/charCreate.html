@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+   <title> CS 340 Final Project </title>
+   <link rel="stylesheet" type="text/css" href="../mainStyle.css">
+</head>
+
+<body>
+
+   <h1> Coliseum Character Creation Screen </h1>
+
+   <p> Here you can create your own character in the Coliseum world </p>
+
+   <div id="navigation">
+      <a href="../projectHome.html">Home screen</a>
+   </div>
+
+   <div>
+      <h3> Create Character </h3>
+      <form action='./charQuery.php' method='POST'>
+	 <fieldset>
+	    <fieldset id="basicInfo">
+	       <legend> Basic Information </legend>
+	       <input type="hidden" name="action" value="INSERT">
+	       <label for="name"> Name </label>
+	       <input type='text' name="name" id="name" value="">
+	       <label for="class"> Class </label>
+	       <input type='text' name="class" id="class" value="">
+	       <label for="allegiance"> Allegiance </label>
+	       <input type='text' name="allegiance" id="allegiance" value="">
+	    </fieldset>
+	    <fieldset id="gender">
+	       <legend> Gender </legend>
+	       <label for="male">Male</label>
+	       <input type='radio' name="gender" id="male" value="male">
+	       <label for="female">Female</label>
+	       <input type='radio' name="gender" id="female" value="female">
+	    </fieldset>
+	    <fieldset>
+	       <legend>Statistics </legend>
+	       <label for="strength">Strength</label>
+	       <input type='number' name="strength" id="strength" value="0">
+	       <label for="intelligence">Intellect</label>
+	       <input type='number' name="intelligence" id="intelligence" value="0">
+	       <label for="endurance">Endurance</label>
+	       <input type='number' name="endurance" id="endurance" value="0">
+	    </fieldset>
+	 </fieldset> 
+	 <br>
+	 <input type="submit">
+      </form>
+   </div>
+
+</body>
+
+</html>

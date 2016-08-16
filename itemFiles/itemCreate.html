@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+   <title> CS 340 Final Project </title>
+   <link rel="stylesheet" type="text/css" href="../mainStyle.css">
+</head>
+
+<body>
+
+   <h1> Coliseum Item Creation Screen </h1>
+
+   <p> Here you can create your own item in the Coliseum world </p>
+
+   <div id="navigation">
+      <a href="../projectHome.html">Home screen</a>
+   </div>
+
+   <div>
+      <h3> Create Item </h3>
+      <form action='./itemQuery.php' enctype='application/json' method='POST'>
+	 <fieldset id="formField">
+	    <fieldset id="basicInfo">
+	       <legend> Basic Information </legend>
+	       <input type="hidden" name="action" value="INSERT">
+	       <label for="name"> Name </label>
+	       <input type='text' name="name" id="name" value="">
+	       <label for="type"> Type </label>
+	       <select name="type" id="type">
+		  <option value="offense">Offense</option>
+		  <option value="defense">Defense</option>
+		  <option value="healing">Healing</option>
+		  <option value="statBuffer">Stat Buffer</option>
+	       </select>
+	       <label for="skillCheck">Item Has a Passive Skill?</label>
+	       <input type='checkbox' name="skillCheck" id="skillCheck">
+	    </fieldset>
+	    <fieldset>
+	       <legend> Offensive Item </legend>
+	       <label for="offense">Offense </label>
+	       <input type='number' name="offense" id="offense" value="0">
+	       <select name="subtype" id="subtype">
+		  <option value="weapon">Weapon</option>
+		  <option value="poison">Poison</option>
+	       </select>
+
+	    </fieldset>
+	 </fieldset> 
+	 <br>
+	 <input type="submit">
+      </form>
+   </div>
+
+   <script src="./itemCreate.js"></script>
+</body>
+
+</html>

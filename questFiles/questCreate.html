@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+   <title> CS 340 Final Project </title>
+   <link rel="stylesheet" type="text/css" href="../mainStyle.css">
+</head>
+
+<body>
+
+   <h1> Coliseum Quest Creation Screen </h1>
+
+   <p> Here you can create your own quest in the Coliseum world </p>
+
+   <div id="navigation">
+      <a href="../projectHome.html">Home screen</a>
+   </div>
+
+   <div>
+      <h3> Create Item </h3>
+      <form action='./questsQuery.php' enctype='application/json' method='POST' id="questForm">
+	 <fieldset id="formField">
+	    <fieldset id="basicInfo">
+	       <legend> Basic Information </legend>
+	       <input type="hidden" name="action" value="INSERT">
+	       <label for="name"> Name </label>
+	       <input type='text' name="name" id="name" value="">
+	       <label for="description"> Quest Description </label>
+	       <textarea name="description" id="description" form="questForm">Description here...</textarea>
+	       <label for="numQuestItems"> Number of Quest Items? </label>
+	       <select name="numQuestItems" id="numQuestItems">
+		  <option value=0>0</option>
+		  <option value=1>1</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+	       </select>
+	       <div id="questItems"></div>
+	    </fieldset>
+	 </fieldset> 
+	 <br>
+	 <input type="submit">
+      </form>
+   </div>
+
+</body>
+<script src="questCreate.js"></script>
+</html>

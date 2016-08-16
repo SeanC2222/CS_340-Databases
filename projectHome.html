@@ -1,0 +1,93 @@
+<!DOCTYPE HMTL>
+
+<html>
+
+<head>
+   <title> CS 340 Final Project </title>
+   <link rel="stylesheet" type="text/css" href="mainStyle.css">
+</head>
+
+<body>
+   <section>
+      <h1> Coliseum Character Viewer </h1>
+
+      <div>
+	 <h3> Character Information </h3>
+	 <p> The character information section will give you all the important information about a character of iterest </p>
+	 <form action="./charFiles/charDetails.html" method="GET">
+	 <label for="charName">Character's Name</label>
+	 <select id="charName" name="charName">
+	 </select>
+	 &nbsp;&nbsp;
+	 <input type="submit" value="View Character Details">
+	 </form>
+	 
+      </div>
+
+   </section>
+
+   <section>
+      <h1> Coliseum Database Editor </h1>
+   
+      <div class="entity">
+	 <h3>Characters</h3>
+	 <p>The characters database contains the set of characters (good and evil) available in Coliseum.</p>
+	 <form action="./charFiles/charCreate.html" method="GET">
+	    <input class="characters" type="submit" name="addCharacters" value="Add Character">
+	 </form>
+	 <input class="characters" type="button" name="vieCharacters" value="View All">
+
+      </div>
+
+      <div class="entity">
+	 <h3>Items</h3>
+	 <p>The items database contains the set of items available to the characters in Coliseum.</p>
+	 <form action="./itemFiles/itemCreate.html" method="GET">
+	    <input class="items" type="submit" name="addItem" value="Add Items">
+	 </form>
+	 <input class="items" type="button" name="vieI" value="View All">
+
+      </div>
+
+      <div class="entity">
+	 <h3>Skills</h3>
+	 <p>The skills database contains the set of all skills (character skills and item skills) available in Coliseum</p>
+
+	 <form action="./skillFiles/skillCreate.html" method="GET">
+	    <input class="skills" type="submit" name="addSkills" value="Add Skills">
+	 </form>
+	 <input class="skills" type="button" name="vieS" value="View All">
+
+     </div>
+
+      <div class="entity">
+	 <h3>Quest Items</h3>
+	 <p>The quest items database contains special items required for quest completion in Coliseum.</p>
+	 <form action="./questItemFiles/questItemCreate.html" method="GET">
+	    <input class="quest_items" type="submit" name="addQuestItems" value="Add Quest Items">
+	 </form>
+
+	 <input class="quest_items" type="button" name="vieQ" value="View All">
+
+     </div>
+
+     <div class="entity">
+	 <h3>Quests</h3>
+	 <p>The quest database contains the quest descriptions and the relevant quest items for completion in Coliseum.</p>
+	 <form action="./questFiles/questCreate.html" method="GET">
+	    <input class="quests" type="submit" name="addQuests" value="Add Quests">
+	 </form>
+
+	 <input class="quests" type="button" name="vieX" value="View All">
+
+     </div>
+
+   <table id="result">
+      <tbody id="resultBody"></tbody>
+   </table>
+
+   </section>
+   <script src="projHome.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+   <title> CS 340 Final Project </title>
+   <link rel="stylesheet" type="text/css" href="../mainStyle.css">
+</head>
+
+<body>
+
+   <h1> Coliseum Skill Creation Screen </h1>
+
+   <p> Here you can create your own skill in the Coliseum world </p>
+
+   <div id="navigation">
+      <a href="../projectHome.html">Home screen</a>
+   </div>
+
+   <div>
+      <h3> Create Skill </h3>
+      <form action='./skillQuery.php' enctype='application/json' method='POST'>
+	 <fieldset id="formField">
+	    <fieldset id="basicInfo">
+	       <legend> Basic Information </legend>
+	       <input type='hidden' name="action" value="INSERT">
+	       <label for="name"> Name </label>
+	       <input type='text' name="name" id="name" value="">
+	       <label for="type"> Type </label>
+	       <select name="type" id="type">
+		  <option value="offense">Offense</option>
+		  <option value="defense">Defense</option>
+		  <option value="healing">Healing</option>
+		  <option value="statBuffer">Stat Buffer</option>
+	       </select>
+	       <label for="elementCheck">Skill is elemental?</label>
+	       <input type='checkbox' name="elementCheck" id="elementCheck">
+	    </fieldset>
+	    <fieldset>
+	       <legend> Offensive Skill </legend>
+	       <label for="magnitude">Offense </label>
+	       <input type='number' name="magnitude" id="magnitude" value="0">
+	       <label for="activeCheck">Skill is actively used?</label>
+	       <input type='checkbox' name="activeCheck" id="activeCheck">
+	    </fieldset>
+	 </fieldset> 
+	 <br>
+	 <input type="submit">
+      </form>
+   </div>
+
+   <script src="./skillCreate.js"></script>
+</body>
+
+</html>
